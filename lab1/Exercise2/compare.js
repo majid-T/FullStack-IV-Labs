@@ -1,5 +1,3 @@
-
-
 const compareNumToTen = (inNum)=>{
     return new Promise((resolve,reject)=>{
         if (inNum < 10){
