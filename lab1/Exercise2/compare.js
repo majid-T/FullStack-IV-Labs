@@ -1,20 +1,29 @@
-const numArr = [1,2,5,10,4,200];
 
 
-const compareNumToTen = (inArr)=>{
+const compareNumToTen = (inNum)=>{
     return new Promise((resolve,reject)=>{
-        for(num of inArr){
-            if (num > 10){
-                reject(`${num} is bigger than 10..`);
-            }
+        if (inNum < 10){
+            reject(`${inNum} is less than 10..`);
         }
-        resolve('All numbers are less than 10');
+
+        resolve(`${inNum} is greater than 10`);
     });
 };
 
-compareNumToTen(numArr)
+
+//Fail case
+compareNumToTen(2)
     .then((data)=>{
-        console.log(data);
+        console.log(`SUCCESS: ${data}`);
+    })
+    .catch((data)=>{
+        console.log(`ERROR: ${data}`);
+    });
+
+//Success case
+compareNumToTen(15)
+    .then((data)=>{
+        console.log(`SUCCESS: ${data}`);
     })
     .catch((data)=>{
         console.log(`ERROR: ${data}`);
