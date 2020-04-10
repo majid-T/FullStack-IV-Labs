@@ -1,10 +1,9 @@
 import React from 'react';
 
 class College extends React.Component {
-    // state = {  }
     render() { 
         return (
-            <p>College name with address</p>
+            <p>College <b>{this.props.name}</b> with address <b>{this.props.location}</b></p>
         );
     }
 }

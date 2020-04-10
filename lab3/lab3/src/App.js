@@ -10,34 +10,13 @@ class App extends React.Component {
   render(){
     return (
     <>
-      <Student/>
-      <Student/>
-      <Student/>
-      <College/>
+      <Student name="Rick Rude" number="11111" enrolled={['Course 1','Course 2']}/>
+      <Student name="Shawn Michaels" number="22222" enrolled={['Course 1']}/>
+      <Student name="Bret Hart" number="33333" enrolled={['Course 3','Course 1']}/>
+      <College name="Geroge Brown" location="Casa Loma"/>
     </>
     )
   }
 }
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
 export default App;
