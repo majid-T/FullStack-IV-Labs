@@ -23,7 +23,6 @@ class UserList extends Component {
         this.getUsers();
     }
 
-//                    {this.state.users.map(user => (<li key={user.name.toString()}>{user.name}</li>))}
 
     getUsers(){
         axios.get('https://jsonplaceholder.typicode.com/users')
