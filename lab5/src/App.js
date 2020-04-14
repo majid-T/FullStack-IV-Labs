@@ -1,23 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import  Home from './component/Home';
+import  About from './component/About';
+import  Contact from './component/Contact';
+import  Error from './component/Error';
+import Navigation from './component/Navigation';
 import {BrowserRouter,Route,Switch,Link} from 'react-router-dom';
 
-const NewRoute = ()=>{
-  return (
-    <div>
-      <p>New Route</p>
-  </div>
-  );
-};
-
-const Home = ()=>{
-  return (
-    <div>
-      <p>Home</p>
-    </div>
-  );
-};
+// const NewRoute = ()=>{
+//   return (
+//     <div>
+//       <p>New Route</p>
+//   </div>
+//   );
+// };
 
 class App extends React.Component {
   
@@ -26,12 +23,13 @@ class App extends React.Component {
       <BrowserRouter>
         <div>
           <ul>
-            <li><Link to='/'>Home</Link></li>
-            <li><Link to='/newRoute'>New Route</Link></li>
+            <Navigation/>
           </ul>
           <Switch>
             <Route exact path='/' component={Home}/>
-            <Route path='/newRoute' component={NewRoute}/>
+            <Route path='/about' component={About}/>
+            <Route path='/contact' component={Contact}/>
+            <Route component={Error}/>
           </Switch>
         </div>
       </BrowserRouter>
@@ -40,25 +38,3 @@ class App extends React.Component {
 }
  
 export default App;
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
