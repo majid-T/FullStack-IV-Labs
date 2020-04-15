@@ -71,3 +71,15 @@ input[type=text]{
   font-size: 0.9em;
   font-style: italic;
 }
+
+.likeButton{
+  background-color: seagreen;
+  color: white;
+  width: 10%;
+}
+
+.dislikeButton{
+  background-color: tomato;
+  color: white;
+  width: 10%;
+}

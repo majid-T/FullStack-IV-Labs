@@ -1,14 +1,14 @@
 import React from 'react';
 
-class LikeButton extends React.Component {
+class DisLikeButton extends React.Component {
     state = { 
         clicks:0
     }
 
     clickAdd = ()=>{
-        let likes = this.state. clicks;
+        let dislikes = this.state. clicks;
         this.setState({
-            clicks:likes+1
+            clicks:dislikes+1
         });
     };
 
@@ -16,11 +16,11 @@ class LikeButton extends React.Component {
 
         return ( 
             <>
-                <button className='likeButton' onClick={this.clickAdd}>Like</button>
+                <button className='dislikeButton' onClick={this.clickAdd}>Dislike</button>
                 <span className='likeCounts'><b>{this.state.clicks}</b></span>
             </>
         );
     }
 }
  
-export default LikeButton;
+export default DisLikeButton;
