@@ -7,10 +7,10 @@ class Comment extends React.Component {
 
      }
     render() { 
-        return ( 
+        return (
             <>
                 <Timer/>
-                <p>Comment</p>
+                <p>{this.props.comment}</p>
                 <LikeButton/>
             </>
          );

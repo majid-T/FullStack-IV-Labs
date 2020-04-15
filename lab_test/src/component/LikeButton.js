@@ -2,12 +2,23 @@ import React from 'react';
 
 class LikeButton extends React.Component {
     state = { 
-        clicks:'',
+        clicks:0
+    }
 
-     }
+    clickAdd = ()=>{
+        let likes = this.state. clicks;
+        this.setState({
+            clicks:likes+1
+        });
+    };
+
     render() { 
+
         return ( 
-            <button>Like</button>
+            <>
+                <button onClick={this.clickAdd}>Like</button>
+                <span>{this.state.clicks}</span>
+            </>
         );
     }
 }
