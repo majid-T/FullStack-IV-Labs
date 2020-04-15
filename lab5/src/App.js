@@ -6,15 +6,8 @@ import  About from './component/About';
 import  Contact from './component/Contact';
 import  Error from './component/Error';
 import Navigation from './component/Navigation';
+import Student from './component/Student'
 import {BrowserRouter,Route,Switch,Link} from 'react-router-dom';
-
-// const NewRoute = ()=>{
-//   return (
-//     <div>
-//       <p>New Route</p>
-//   </div>
-//   );
-// };
 
 class App extends React.Component {
   
@@ -29,7 +22,9 @@ class App extends React.Component {
             <Route exact path='/' component={Home}/>
             <Route path='/about' component={About}/>
             <Route path='/contact' component={Contact}/>
-            <Route component={Error}/>
+            <Route path='/Student/:studentname' component={Student}/>
+            <Route path='/Student/:studentname/:studentno?' component={Student}/>
+            <Route component={Student}/>
           </Switch>
         </div>
       </BrowserRouter>
