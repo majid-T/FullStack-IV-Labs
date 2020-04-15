@@ -10,7 +10,7 @@ class Comment extends React.Component {
         return (
             <>
                 <Timer/>
-                <p>{this.props.comment}</p>
+                <p className='commentText'>{this.props.comment}</p>
                 <LikeButton/>
             </>
          );

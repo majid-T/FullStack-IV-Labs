@@ -23,25 +23,25 @@ class TweeterContainer extends React.Component {
 
     render() { 
         return ( 
-            <>
-                <h2>{this.props.status}</h2>
+            <div className='tweet'>
+                <h2><q>{this.props.status}</q></h2>
                 <div>
                 <form onSubmit={this.handleSubmit}>
                     <label>
-                        <input type="text" name="comment" onChange={this.handleChange}/>
+                        <input type="text" onChange={this.handleChange}/>
                     </label>
                     <button type="submit">Post</button>
                 </form>
                 </div>
                 <ul>
                     {this.state.comments.map(comment => (
-                        <>
+                        <li className='comments'>
                             <Comment comment={comment}/>
                             <br/>
-                        </>
+                        </li>
                     ))}
                 </ul>
-            </>
+            </div>
          );
     }
 }

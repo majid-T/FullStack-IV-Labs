@@ -41,3 +41,33 @@ p {
   display: inline-block;
   margin: 15px;
 }
+
+.likeCounts{
+  margin: 10px;
+
+}
+
+.tweet{
+  background-color: deepskyblue;
+  margin: 10px 45px 10px 45px;
+  border-radius: 90px;
+  padding:5px;
+}
+
+.comments{
+  list-style-type:none;
+  padding-left: 15px;
+  margin: 10px 20% 10px 20%;
+  background-color: aliceblue;
+  text-align: left;
+  border-radius: 30px;
+}
+
+input[type=text]{
+  width: 60%;
+}
+
+.commentText{
+  font-size: 0.9em;
+  font-style: italic;
+}
