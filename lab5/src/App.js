@@ -1,19 +1,19 @@
 import React from 'react';
-// import logo from './logo.svg';
 import './App.css';
 import  Home from './component/Home';
 import  About from './component/About';
 import  Contact from './component/Contact';
-import  Error from './component/Error';
 import Navigation from './component/Navigation';
 import Student from './component/Student'
 import {BrowserRouter,Route,Switch,Link} from 'react-router-dom';
+import history from './History';
+import Redirect from './component/Redirect';
 
 class App extends React.Component {
   
   render() { 
     return ( 
-      <BrowserRouter>
+      <BrowserRouter history={history}>
         <div>
           <ul>
             <Navigation/>
@@ -24,7 +24,7 @@ class App extends React.Component {
             <Route path='/contact' component={Contact}/>
             <Route exact path='/Student/:studentname' component={Student}/>
             <Route path="/Student/:studentname/:studentno?" component={Student}/>
-            {/* <Route component={Student}/> */}
+            <Route path="/Redirect" component={Redirect}/>
           </Switch>
         </div>
       </BrowserRouter>
