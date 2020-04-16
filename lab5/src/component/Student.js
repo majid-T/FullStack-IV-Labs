@@ -20,16 +20,15 @@ const WithStNo = (props)=>{
 };
 
 const Student = ({match})=>{
-    const {studentname} = match.params;
-    console.log(match.params);
-    
-    if( match.studentno !== undefined){
+    const {studentname, studentno} = match.params;
+
+    if( studentno === undefined){
         return (
-            <WithStNo studentname={studentname} studentno={match.studentno} />
+          <WithoutStNo studentname={studentname}/>
         );
     }else{
         return (
-            <WithoutStNo studentname={studentname}/>
+          <WithStNo studentname={studentname} studentno={studentno} />
         );    
     }
 

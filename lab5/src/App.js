@@ -22,9 +22,9 @@ class App extends React.Component {
             <Route exact path='/' component={Home}/>
             <Route path='/about' component={About}/>
             <Route path='/contact' component={Contact}/>
-            <Route path='/Student/:studentname' component={Student}/>
-            <Route path='/Student/:studentname/:studentno?' component={Student}/>
-            <Route component={Student}/>
+            <Route exact path='/Student/:studentname' component={Student}/>
+            <Route path="/Student/:studentname/:studentno?" component={Student}/>
+            {/* <Route component={Student}/> */}
           </Switch>
         </div>
       </BrowserRouter>
