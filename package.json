@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/majid-T/FullStack-IV-Labs/issues"
   },
-  "homepage": "https://github.com/majid-T/FullStack-IV-Labs#readme"
+  "homepage": "https://github.com/majid-T/FullStack-IV-Labs#readme",
+  "devDependencies": {
+    "express": "^4.17.1"
+  }
 }
