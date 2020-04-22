@@ -19,7 +19,6 @@ router.get('/events', (req, res, next) => {
 
 router.get('/chats', (req, res, next) => {
     const {roomname} = req.query;
-    console.log(roomname);
 
     if(roomname===undefined){
         dbDao.getAllChats()

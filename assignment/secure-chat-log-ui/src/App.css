@@ -1,0 +1,91 @@
+body {
+  background: -webkit-linear-gradient(left, #00c6ff,#0072ff);
+}
+
+.NavBar{
+  width: 80%;
+  margin: 10px 10% 10px 10%; 
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.NavItemSpan{
+  background-color: #ffc107;
+  border:1px solid transparent;
+  border-radius: 0.5rem 0 0.5rem 0;
+  margin-left: 1rem;
+  font-size: 0.9em;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+.errMsg {
+  width: 50%;
+  margin-top:10px;
+  margin-left: 25%;
+  border-radius: 10px;
+  background-color: tomato;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+.successMsg{
+  margin-top:10px;
+  width: 40%;
+  margin-left: 30%;
+  border-radius: 10px;
+  background-color: seagreen;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+.loginDiv{
+  margin-top:10px;
+  width: 40%;
+  margin:25px 30% 25px 30%;
+  border-radius: 10px;
+  background-color: darkcyan;
+  text-align: center;
+}
+
+.loginDiv input{
+  width: 50%;
+}
+
+.usernameSpan{
+  float: right;
+  padding: 10px;
+  background-color: khaki;
+  border-radius: 0.5rem;
+}

@@ -21,14 +21,19 @@ app.use((req,res,next)=>{
   next();
 });
 
+// routes to the end points...
+// For signup users
 const routes = require('./routes/routes');
-const secureRoute = require('./routes/secure-route');
-const events = require('./routes/chat-logs');
-
 app.use('/', routes);
-app.use('/logs',events);
-//We plugin our jwt strategy as a middleware so only verified users can access this route
-app.use('/user', passport.authenticate('jwt', { session : false }), secureRoute );
+
+// Only authenticated users
+const secureRoute = require('./routes/secure-route');
+app.use('/secure-nodes', passport.authenticate('jwt', { session : false }), secureRoute );
+
+//public routes
+const chatLogs = require('./routes/chat-logs');
+// app.use('/logs',chatLogs);
+app.use('/logs',passport.authenticate('jwt', { session : false }),chatLogs)
 
 //Handle errors
 app.use(function(err, req, res, next) {
@@ -36,9 +41,8 @@ app.use(function(err, req, res, next) {
   res.json({ error : err });
 });
 
-
+//Starting server on server defined port or 3030
 let port = (process.env.PORT || '3030');
-
 app.listen(port, () => {
   console.log('Chat-log backend Server started')
 });
