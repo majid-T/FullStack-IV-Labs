@@ -1,3 +1,5 @@
+Project by Majid Shockoohi student ID: 101284289
+
 This is the backend so should be start first
 node_modules were excluded so:
 RUN: npm install
