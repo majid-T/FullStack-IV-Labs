@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/majid-T/FullStack-IV-Labs#readme",
   "devDependencies": {
-    "express": "^4.17.1"
+    "express": "^4.18.2"
   }
 }
